@@ -14,10 +14,24 @@
 <h1 class="text-primary">Malaria Prediction<h1>
 <h5>Please upload the image of the cell</h5>
 <form class="p-3 text-center" action='/',methods="post" enctype="">
-    <input class="form-control" type="file" name="imagefile">
+    <input class="form-control" type="file" name="imagefile" id="upload_file" onchange="getImagePreview(event)">
+    <p></p>
+    <div id="preview"></div>
     <input class="btn btn-primary mt-3" type="submit" value="Predict">
     <p></p>
     <a class="btn btn-primary" href="index.html" role="button"><i class="fa fa-home"></i>  Home</a>
 </form>
+<script>
+    function getImagePreview(event)
+    {
+        var image=URL.createObjectURL(event.target.files[0]);
+        var imagediv= document.getElementById('preview');
+        var newimg=document.createElement('img');
+        imagediv.innerHTML='';
+        newimg.src=image;
+        newimg.width="200";
+        imagediv.appendChild(newimg);
+      }
+</script>
 </body>
 </html>
