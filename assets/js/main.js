@@ -45,20 +45,23 @@ sr.reveal('.about__subtitle',{delay: 300});
 sr.reveal('.about__text',{delay: 300}); 
 
 /*SCROLL PREDICTION*/
-sr.reveal('.skills__subtitle',{}); 
-sr.reveal('.skills__text',{}); 
-sr.reveal('.skills__data',{interval: 200}); 
-sr.reveal('.skills__img',{delay: 500});
-sr.reveal('.work__container',{delay: 200});
+sr.reveal('.work__img',{interval: 50});
+// sr.reveal('.skills__subtitle',{}); 
+// sr.reveal('.skills__text',{}); 
+// sr.reveal('.skills__data',{interval: 200}); 
+// sr.reveal('.skills__img',{delay: 500});
+// sr.reveal('.work__container',{delay: 200});
 
 /*SCROLL FAQ*/
 sr.reveal('.Layout',{interval: 100});
-sr.reveal('.accordion-item',{interval: 100});
+sr.reveal('.accordion-item',{interval: 50});
 
 
 
 /*SCROLL TEAM*/
-sr.reveal('.contact__input',{interval: 100}); 
+// sr.reveal('.contact__input',{interval: 50}); 
+
+// FAQ Script
 
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
@@ -84,3 +87,7 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
   });
 });
+
+/*TEAM*/
+sr.reveal('.profile',{interval: 50});
+sr.reveal('.team__text',{interval: 50});
